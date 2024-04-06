@@ -20,7 +20,7 @@ export const signup=asyncHandler(async(req,res,next)=>{
     
     await User.create({...req.body})
 
-    const confirmLink=`http://localhost:3000/auth/active_account/${token}`;
+    const confirmLink=`https://anime-node.vercel.app/auth/active_account/${token}`;
 
     const message=await sendEmail({
         to:email,
